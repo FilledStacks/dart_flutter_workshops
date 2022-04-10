@@ -9,7 +9,8 @@ int calculateSum(int a, int b) {
 }
 
 Future<double> getWeather(String location) async {
-  await Future.delayed(Duration(seconds: 3));
+  print('Fetching weather ...');
+  await Future.delayed(Duration(seconds: 2));
   print('weather retrieved');
   return 30;
 }

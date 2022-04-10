@@ -1,4 +1,4 @@
-name: Example workshop
+name: Beginner Guide to Futures
 
 # Accepts 'flutter' or 'dart'
 type: dart
@@ -6,8 +6,20 @@ type: dart
 # Configuration for each step 
 steps:
   - name: Why use Futures
-    directory: why_use_futures
-    has_solution: true
-  - name: Step 2
-    directory: step_02
+    directory: 01_why_use_futures
+    has_solution: false
+  - name: Create a Future
+    directory: 02_creating_a_future
+    has_solution: false
+  - name: Using a Future
+    directory: 03_using_a_future
+    has_solution: false
+  - name: Handle Errors
+    directory: 04_error_handling
+    has_solution: false
+  - name: Multiple Futures
+    directory: 05_multiple_futures
+    has_solution: false
+  - name: Future and Time
+    directory: 06_future_timeout
     has_solution: false
