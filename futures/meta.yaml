@@ -7,19 +7,28 @@ type: dart
 steps:
   - name: Why use Futures
     directory: 01_why_use_futures
-    has_solution: false
+    has_solution: true
   - name: Create a Future
     directory: 02_creating_a_future
-    has_solution: false
-  - name: Using a Future
-    directory: 03_using_a_future
-    has_solution: false
-  - name: Handle Errors
-    directory: 04_error_handling
-    has_solution: false
-  - name: Multiple Futures
-    directory: 05_multiple_futures
-    has_solution: false
-  - name: Future and Time
+    has_solution: true
+  - name: Using Async/Await
+    directory: 03a_using_a_future
+    has_solution: true
+  - name: Using Then
+    directory: 03b_using_a_future
+    has_solution: true
+  - name: Notify Errors from a Future
+    directory: 04a_error_handling
+    has_solution: true
+  - name: Handle Errors from a Future
+    directory: 04b_error_handling
+    has_solution: true
+  - name: Run Multiple Futures
+    directory: 05a_multiple_futures
+    has_solution: true
+  - name: Wait For Multiple Futures
+    directory: 05b_multiple_futures
+    has_solution: true
+  - name: Future Timeout
     directory: 06_future_timeout
-    has_solution: false
+    has_solution: true

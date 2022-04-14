@@ -4,12 +4,16 @@ Future<void> main() async {
 }
 
 Future<void> downloadAllFiles(List<int> fileIdsToDownload) async {
-  // Place your code here
+  // Loop through each Id and download the file for the id
+  for (final id in fileIdsToDownload) {
+    await downloadFile(id);
+  }
+
+  print('Notify user all dowloads are complete!');
 }
 
-Future<String> downloadFile(int fileId) async {
+Future<void> downloadFile(int fileId) async {
   await Future.delayed(Duration(milliseconds: fileId * 10));
   final url = 'http://downloaded.fileid=$fileId';
   print('download complete for: $url at ${DateTime.now()}');
-  return url;
 }

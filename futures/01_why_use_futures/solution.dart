@@ -1,9 +1,16 @@
-Future<void> main() async {
+void main() {
   // Put your code below
-  String location = 'Cape Town';
+  final sum = calculateSum(5, 3);
+  print('sum: $sum');
 
-  final weather = await getWeather(location);
+  final weather = getWeather('Cape Town');
   print('weather: $weather');
+}
+
+int calculateSum(int a, int b) {
+  final sum = a + b;
+  print('sum calculated');
+  return sum;
 }
 
 Future<double> getWeather(String location) async {

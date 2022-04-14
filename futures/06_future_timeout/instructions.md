@@ -1,30 +1,35 @@
 # Future Timeouts
 
-Futures are there for long running tasks but we don't always want them to run for very long. Some tasks we want to ensure always returns under a certain amount of time. Things like fetching data from our backend. To make sure our future returns in the correct amount of time or fails instead we can use the timeout functionality. 
+Futures are there for long running tasks but you don't always want them to run for very long. Some tasks you want to ensure always returns under a certain amount of time. To make sure the future returns in the correct amount of time or fails, you can use the timeout functionality. 
 
 ## Timing out
 
-In the main function we can call our `downloadFile` function and we'll see any value we pass in will take multiple minutes to complete. So, if we want to make sure it completes or fails in 1 second we can use the timeout function. Call the future and add a `.timeout` function call like below
+In the main function call the `downloadFile` function and you'll see any value that is passed in will take multiple minutes to complete. Instead of waiting so long, you can stop this function after 1 second using the `timeout` function. 
+
+This function takes a duration (when to time out), and an `onTimeout` function that is called when your duration is complete. You need to return a value in this timeout if your `Future` is expected to return a value.
 
 ```dart
-Future<void> main() async {
-  final downloadUrl = await downloadFile(2)
-      .timeout(
-        Duration(seconds: 1), 
-        onTimeout: (){
-          print('Future timed out!');
-          return 'TIME_OUT';
-        },
-      );
-  print('Download URL: $downloadUrl');
-}
+await getWeather('Cape Town')
+    .timeout(
+    Duration(seconds: 1), 
+    onTimeout: (){
+     print('Future timed out!');
+        return 'TIME_OUT';
+     },
+  );
 ```
 
-When you run the code now, even though we know that the function will take multiple minutes to complete, the timeout will actually kill off that future given the duration and then return the value from the `onTimeone` callback function. You should see similar logs to the one below.
+## Your turn
 
-```dart
+Use the `timeout` function to stop the `downloadFile` call and stop it after 1 second. Print out "Future timed out" at the start of the callback function and Return a value 'TIME_OUT' from the function.
+
+---
+
+When you run the code now, even though you know that the function will take multiple minutes to complete, the timeout will actually kill off that future given the duration and then return the value from the `onTimeout` callback function. You should see similar logs to the one below.
+
+```
 Future timed out!
 Download URL: TIME_OUT
 ```
 
-And with that, you should be able to handle all your `Future` requirements with `Futures` 🙈 .Thank you for following along, I am working on a Streams guide which I'll be posting [on my Twitter](https://twitter.com/filledstacks). There's some goodies in there!
+That is everything you need to know about Futures! Well done and Thank you for following along. 
