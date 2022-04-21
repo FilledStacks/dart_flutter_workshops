@@ -4,7 +4,7 @@ There are 2 Future specific ways to handle errors from Futures (In addition to t
 
 ## 1. Using catchError function
 
-Similar to the `.then` function you can also call the `.catchError` function on a Future. This function takes in a callback function that passes the error as an object and expects you to return a value that is the same type as the future.
+Similar to the `.then` function you can also call the `.catchError` function on a Future. This function takes in a callback function that passes the error as an object and expects you to return a value that is the same type as the future. _This is a "Catch all" solution where you cannot specify the type of error you want to catch._
 
 ```dart
 myBoolFuture().catchError((error) {
@@ -32,7 +32,7 @@ You have to return a value from the catchError function because even though you 
 
 ## 2. Then onError callback
 
-If you are using `.then`, you also have a specific way to handle your errors. The function has a named parameter `onError` where you can supply a callback function that accepts a single object as a parameter.
+If you are using `.then`, you also have a specific way to handle your errors. The function has a named parameter `onError` where you can supply a callback function that accepts a single object as a parameter. _This function can fire for an error of a specific type. This is used for more precise error handling than the `catchError` function above._
 
 ```dart
   myFuture()
