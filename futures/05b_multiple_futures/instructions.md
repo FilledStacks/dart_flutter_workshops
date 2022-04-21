@@ -5,7 +5,7 @@ In contrast to the previous example, instead of waiting for a future to complete
 
 ## Future.wait
 
-The future class provides you with a static utility function that can be used to wait for multiple futures given an `Iterable` list of `Future<T>`.
+The future class provides you with a static utility function that can be used to wait for multiple futures given an `Iterable` of `Future<T>`.
 
 ```dart
 await Future.wait([

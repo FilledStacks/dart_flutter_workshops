@@ -21,7 +21,8 @@ Future<void> myFuture() async {
 }
 ```
 
-## Your Turn
+<!-- Hm, feels like the "your turn" headings should be h3 instead of h2 since they belong to Sections 1 and 2 respectively. However, the text formatting for h3 on Dartpad is kinda bad. -->
+### Your Turn
 
 Mark the `calculateSum` function as async
 
@@ -37,7 +38,7 @@ The `Future` class provides you with a factory function that you can use to cons
 final futureBoolean = Future.value(true);
 ```
 
-## Your Turn
+### Your Turn
 
 Update the `combineName` function to a `future` without using the `async` keyword.
 
