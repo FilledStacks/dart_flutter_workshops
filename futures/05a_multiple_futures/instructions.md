@@ -12,6 +12,7 @@ Given all the Future knowledge you've acquired, loop over each file id in a for 
 
 ---
 
+<!-- Maybe trim this down to 3 files that takes <5 seconds to complete? Maybe that's just the monkey brain talking though... -->
 When you run this code the output should look like below and it took 13 seconds to complete. 
 
 ```

@@ -22,8 +22,6 @@ When you run this you'll see console output is in the same order as expected. In
 
 This has a nice (sometimes sneaky, side effect). The code will continue to execute all code after calling `getWeather` regardless of if it's has returned it's value. 
 
-## Your Turn
-
 Add a print statement after you call `getWeather` as the last line in the function and run it. You'll see the last line is output before `getWeather` completes.
 
 ---

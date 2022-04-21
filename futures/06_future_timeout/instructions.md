@@ -1,6 +1,6 @@
 # Future Timeouts
 
-Futures are there for long running tasks but you don't always want them to run for very long. Some tasks you want to ensure always returns under a certain amount of time. To make sure the future returns in the correct amount of time or fails, you can use the timeout functionality. 
+Futures are designed for long running tasks, but you don't always want them to run for very long. Some tasks you want to ensure always returns under a certain amount of time. To make sure the future returns in the correct amount of time or fails, you can use the timeout functionality. 
 
 ## Timing out
 
@@ -14,14 +14,14 @@ await getWeather('Cape Town')
     Duration(seconds: 1), 
     onTimeout: (){
      print('Future timed out!');
-        return 'TIME_OUT';
+        return 'TIME_OUT'; // Is this valid? In previous steps, `getWeather` returns a `Future<int>`, not a `Future<String>`? This makes it seem like timeout can emit any type of object, but isn't it constrained to returning an `int` here?
      },
   );
 ```
 
 ## Your turn
 
-Use the `timeout` function to stop the `downloadFile` call and stop it after 1 second. Print out "Future timed out" at the start of the callback function and Return a value 'TIME_OUT' from the function.
+Use the `timeout` function to stop the `downloadFile` call after 1 second. Print out "Future timed out" at the start of the callback function and Return a value 'TIME_OUT' from the function.
 
 ---
 
@@ -32,4 +32,4 @@ Future timed out!
 Download URL: TIME_OUT
 ```
 
-That is everything you need to know about Futures! Well done and Thank you for following along. 
+That is everything you need to know about Futures! Well done and thank you for following along. 

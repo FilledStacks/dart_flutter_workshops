@@ -1,6 +1,6 @@
 # Handle Errors from a Future
 
-There are 2 Future specific ways to handle errors from Futures (In addition to the normal `try/catch`).
+In addition to normal the `try/catch`, Futures offer two specific ways to handle errors.
 
 ## 1. Using catchError function
 
@@ -13,7 +13,7 @@ myBoolFuture().catchError((error) {
 });
 ```
 
-## Your Turn
+### Your Turn
 
 On the `getWeather` function call, call the `catchError` function and print out "Error fetching weather. $error".
 
@@ -32,6 +32,7 @@ You have to return a value from the catchError function because even though you 
 
 ## 2. Then onError callback
 
+<!-- Can you give an example of onError handling an error of a specific type? The code example below appears as though it handles all types of errors?-->
 If you are using `.then`, you also have a specific way to handle your errors. The function has a named parameter `onError` where you can supply a callback function that accepts a single object as a parameter. _This function can fire for an error of a specific type. This is used for more precise error handling than the `catchError` function above._
 
 ```dart
@@ -44,7 +45,7 @@ If you are using `.then`, you also have a specific way to handle your errors. Th
 }
 ```
 
-## Your Turn
+### Your Turn
 
 Call the `getWind` fuction using .then and handle the error for it in the `onError` callback.
 

@@ -6,18 +6,18 @@ There are 2 ways that you can indicate that an error has occurred inside a Futur
 
 Inside a function that's expected to return a `Future<T>` if you want the calling function to know that something went wrong you can return `Future.error("My error")` from the future to trigger an exception state in dart. 
 
-## Your Turn
+### Your Turn
 
 Update the `getWeather` function to return an error that tells the caller "No weather found at $location".
 
 
-### 2. Throw an Exception
+## 2. Throw an Exception
 
 In addition to the `Future.error` functionality above you can also throw an Exception from a Future. 
 
-## Your Turn
+### Your Turn
 
-Update the `getWind` function and throw an exception that says "No weather found at $location".
+Update the `getWind` function and throw an exception that says "No wind found at $location".
 
 ---
 
