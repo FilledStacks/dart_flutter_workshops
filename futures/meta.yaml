@@ -5,8 +5,8 @@ type: dart
 
 # Configuration for each step 
 steps:
-  - name: Why use Futures
-    directory: 01_why_use_futures
+  - name: What is a Future
+    directory: 01_what_is_a_future
     has_solution: true
   - name: Create a Future
     directory: 02_creating_a_future

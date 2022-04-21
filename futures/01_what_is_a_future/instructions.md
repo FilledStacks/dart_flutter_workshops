@@ -1,4 +1,4 @@
-# Why use Futures?
+# What is a Future?
 
 There are two types of tasks when writing software. Synchronous and Asynchronous and you ALWAYS need to use both. Futures are used for asynchronous tasks. Lets look at an example of both. In the code on the right there are 2 functions. 
 
@@ -20,7 +20,7 @@ sum calculated
 sum: 3
 ```
 
-This is synchronous. Each line completes before moving to the next. Now lets look at the `getWeather` function. It uses a type `Future`, How do you write code for that? The answer is ... Not like the code above 🤯 
+This is a synchronous task. Each line of code completes before moving to the next. Now, lets look at the `getWeather()` function. It has the type `Future`, How do you get an actual value from this function? The answer is ... Not like the code above 🤯 
 
 ## Your Turn
 
@@ -36,6 +36,6 @@ weather: Instance of 'Future<double>'
 weather retrieved
 ```
 
-The first thing to notice is `Instance of Future<double>`, you returned 30 and it's not printed out anywhere. The second and more important thing to notice is Weather retrieved printed out after the `print('weather: $weather');` statement but the function was called before it. 
+The first thing to notice is `Instance of Future<double>`, you returned 30 and it's not printed out anywhere. The second and more important thing to notice is `"weather retrieved"` printed out after the `"weather: $weather"` statement but the function was called before it. 
 
 To dive deeper into this lets learn more about Futures in Dart!

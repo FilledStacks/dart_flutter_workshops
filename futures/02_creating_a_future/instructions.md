@@ -2,7 +2,7 @@
 
 Futures are created like any other type in Dart. The most common use case is returning the type `Future` from a function that you want to run asynchronously.
 
-If you look at the code on the right you can turn the function `calculateSum` into a future simply by returning the `Future<T>` and setting your generic argument (The "T"), to the type you want to return. 
+If you look at the code on the right, you can turn the function `calculateSum` into a future simply by returning the `Future<T>` and setting your generic argument (The "T"), to the type you want to return. 
 
 ## Your Turn
 
@@ -27,7 +27,7 @@ Mark the `calculateSum` function as async
 
 ---
 
-The error will go away. This is because dart now knows that whatever the result is of the code in your body, when it's returned it'll be returned inside a Future instance that you have to unwrap in the calling code. Turning the function above into a future is not useful, but this applies to any function you want to transform into a future.
+The error will go away. This is because Dart now knows that whatever the result is of the code in your body, when it's returned it'll be returned inside a Future instance that you have to unwrap in the calling code. Turning the function above into a future is not useful, but this applies to any function you want to transform into a Future.
 
 ## 2. Wrap your return value in a Future (manually)
 
